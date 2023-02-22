@@ -1,0 +1,12 @@
+.signup-left{
+    background-image: linear-gradient(rgba(163,4,4,0.05), rgba(4, 9, 30, 0)),url(../SignupImages/somepic.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+.eye{
+    background-image: url(../SignupImages/eye.svg);
+    background-size: cover;
+}
