@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: 'DM Sans';
+}
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	transition: 0.3s ease;
+	font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+  
+}
+
+@layer components {
+	.navLinks > a{
+		@apply translate-y-[2px];
+	}
+
+	.navLinks > a:not(.active) {
+		--brightness: .9;
+		@apply brightness-90;
+	}
+	.navLinks .active {
+		@apply font-bold text-current;
+	}
+	h1 {
+		@apply font-bold text-2xl;
+	}
+
+	h2 {
+		@apply font-bold text-2xl;
+	}
+
+	h3 {
+		@apply font-bold text-lg;
+	}
+
+	h4{
+		@apply font-bold text-base;
+	}
+	
+	.maxw {
+		@apply max-w-[1400px] mx-auto;
+	}
+
+	.middle {
+		@apply px-5 lg:px-20;
+	}
+
+	.midmaxw {
+		@apply mx-auto md:mx-12 rounded-2xl;
+		width: calc(100% - 48px * 2);
+	}
+
+	.AccomodationPage .TextContent > div {
+		@apply max-w-xs;
+	}
+
+	html {
+		@apply text-[15px] md:text-[16px];
+	}
+
+	.Service {
+		@apply overflow-hidden;
+	}
+
+	.Service * {
+		transition: 0.3s ease;
+	}
+	.form-input-container{
+		@apply flex flex-col space-y-2 ;
+	}
+
+	.form-input-container label{
+		@apply text-lg font-semibold capitalize;
+	}
+	.form-input-container input{
+		@apply outline-none py-3 px-4 placeholder:text-gray-400 placeholder:text-sm border border-gray-400 rounded;
+	}
+
+	.form-input-container input:focus{
+		@apply border-blue-500;
+	}
+
+	.Service:hover .Service-Btn {
+		@apply !bottom-2 top-auto;
+	}
+
+	.noChildBorder *{
+		border:none !important;
+	}
+	.noChildOutline *{
+		outline:none !important;
+	}
+}
