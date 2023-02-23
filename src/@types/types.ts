@@ -1,4 +1,4 @@
 export type Profile = {
-  picture: string;
+  picture?: string;
   name: string;
 };
