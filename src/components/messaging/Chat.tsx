@@ -34,7 +34,7 @@ const Chat: React.FC<ChatProps> = ({ onSendMessage }) => {
         {messages.map((msg, index) => (
           <div
             key={index}
-            className={`border-2 rounded-xl mx-4 border-[#204885] p-2 mb-2 ${
+            className={`border-2 rounded-xl mx-4 border-[#204885] p-2 mb-2 text-xl ${
               msg.isSent ? "ml-auto" : ""
             }`}
             style={{ maxWidth: "75%" }}
@@ -50,7 +50,7 @@ const Chat: React.FC<ChatProps> = ({ onSendMessage }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="outline-none ml-4 text-lg px-4 py-6"
+          className="outline-none ml-4 text-lg px-4 py-6 w-[100%]"
           placeholder="Type a message..."
         />
         <div className="flex justify-end">

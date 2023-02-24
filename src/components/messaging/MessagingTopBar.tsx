@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import pic from "../../images/person.png";
+import pic from "../../images/vava.svg";
 import logo from "../../images/logo.png";
 import messaging from "../../images/messaging.svg";
 import phone from "../../images/phone.svg";
@@ -19,9 +19,9 @@ const MessagingTopBar: React.FC<MessagingTopBarProps> = () => {
         <img src={logo} alt="" />
       </div>
       <div className="h-full flex items-center justify-between mr-8 px-8 w-[20%]">
-        <img src={phone} alt="" className="h-[30%]" />
-        <img src={messaging} alt="" className="h-[30%]" />
-        <img src={account} alt="" className="h-[30%]" />
+        <img src={phone} alt="" className="h-[25%] cursor-pointer" />
+        <img src={messaging} alt="" className="h-[25%] cursor-pointer" />
+        <img src={account} alt="" className="h-[25%] cursor-pointer" />
       </div>
     </div>
   );

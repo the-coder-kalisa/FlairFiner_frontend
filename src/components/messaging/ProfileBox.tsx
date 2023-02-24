@@ -1,6 +1,6 @@
 import React from "react";
 import { Profile } from "../../@types/types";
-import pic from "../../images/person.png"
+import pic from "../../images/out.svg"
 import axios from "axios";
 
 const ProfileBox: React.FC<Profile> = ({ picture, name }) => {
