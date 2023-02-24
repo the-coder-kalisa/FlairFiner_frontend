@@ -9,6 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Login />}></Route>
         <Route path="signup" element={<Signup />}></Route>
         <Route path="chat" element={<Messaging />}></Route>
         <Route path="login" element={<Login />} />
