@@ -1,11 +1,16 @@
 import React from 'react'
-import './Signup.css'
-const Signup=()=> {
+// import 'Signup.css'
+
+import SignupLeft from './SignupLeft'
+import SignupRight from './SignupRight'
+const Signup : React.FC=()=> {
   return (
-    <div className="h-screen w-screen bg-white flex flex-row text-cyan-600">
-    
-    <div id='left' className='w-1/3 bg-["A30404"] bg-cover'>Jowo</div>
-    <div id='right' className="w-2/3 ">Okay</div>
+    <div className="lg:h-screen lg:w-screen flex items-center justify-center flex-row bg-white">
+    <div className='w-9/12 h-[87.5%] flex flex-row '>
+
+   <SignupLeft  />
+   <SignupRight />
+    </div>
     </div>
   )
 }
