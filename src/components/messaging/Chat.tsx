@@ -34,7 +34,7 @@ const Chat: React.FC<ChatProps> = ({ onSendMessage }) => {
         {messages.map((msg, index) => (
           <div
             key={index}
-            className={`border-2 rounded-xl mx-4 border-[#204885] p-2 mb-2 text-xl ${
+            className={`border-2 rounded-xl mx-4 w-fit border-[#204885] break-words p-2 mb-2 text-xl ${
               msg.isSent ? "ml-auto" : ""
             }`}
             style={{ maxWidth: "75%" }}
@@ -44,13 +44,13 @@ const Chat: React.FC<ChatProps> = ({ onSendMessage }) => {
         ))}
       </div>
       <div className="py-6 border border-[#204885] flex h-[10%] w-[70%] justify-between text-center px-6 mx-4 my-6 rounded-lg">
-        <img src={emoji} alt="" className="" />
+        <img src={emoji} alt="" className="cursor-pointer" />
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="outline-none ml-4 text-lg px-4 py-6 w-[100%]"
+          className="outline-none ml-4 text-lg px-4 py-6 w-full overflow-wrap-anywhere"
           placeholder="Type a message..."
         />
         <div className="flex justify-end">
