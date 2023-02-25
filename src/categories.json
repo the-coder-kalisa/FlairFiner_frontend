@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+        "name": "juggling",
+        "link": "#juggling"
+    },
+    {
+        "name": "Circus Arts",
+        "link": "#circusarts"
+    },
+    {
+        "name": "Acrobats",
+        "link": "#acrobats"
+    },
+    {
+        "name": "impersonations",
+        "link": "#impersonations"
+    },
+    {
+        "name": "Mime and Physical theatre",
+        "link": "#mime"
+    },
+    {
+        "name": "Aerial arts",
+        "link": "#aerial arts"
+    },
+    {
+        "name": "Puppetry",
+        "link": "#puppetry"
+    },
+    {
+        "name": "Creativity",
+        "link": "#creativity"
+    },
+    {
+        "name": "Unicycling",
+        "link": "#unicycling"
+    },
+    {
+        "name": "Instrumental music",
+        "link": "#instrumental"
+    },
+    {
+        "name": "BeatBoxing",
+        "link": "#beatboxing"
+    },
+    {
+        "name": "Magic and illusions",
+        "link": "#magic"
+    },
+    {
+        "name": "Dancing",
+        "link": "#dancing"
+    },
+    {
+        "name": "Ventriloquism",
+        "link": "#ventriloquism"
+    },
+    {
+        "name": "Stand-up comedy",
+        "link": "#comedy"
+    }
+  ]
+}
