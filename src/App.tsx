@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./components/signup/Signup";
 import Messaging from "./components/messaging/Messaging";
 import Categories from "./components/categories/Categories";
+import Welcome from "./components/welcome/Welcome";
 import Login from "./components/Login/Login";
 ("./components/signup/Signup");
 function App() {
@@ -10,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />}></Route>
+        <Route path="/" element={<Welcome />}></Route>
         <Route path="signup" element={<Signup />}></Route>
         <Route path="chat" element={<Messaging />}></Route>
         <Route path="login" element={<Login />} />
