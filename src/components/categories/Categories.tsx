@@ -1,6 +1,6 @@
 import * as React from "react";
 import Browse from "./Browse";
-import CatSidebar from "./catSidebar";
+import Sidebar from "../sidebar/Sidebar";
 import AllCategories from "./AllCategories";
 import NavBar from "../navbar/Navbar";
 interface CategoriesProps {}
@@ -10,7 +10,7 @@ const Categories: React.FC<CategoriesProps> = () => {
     <div>
       <NavBar />
       <div className="flex">
-        <CatSidebar />
+        <Sidebar />
         <div className="w-[85%]">
           <Browse />
           <AllCategories numImages={20} />
