@@ -3,19 +3,13 @@ import Browse from "./Browse";
 import Sidebar from "../sidebar/Sidebar";
 import AllCategories from "./AllCategories";
 import NavBar from "../navbar/Navbar";
-interface CategoriesProps {}
+interface CategoriesProps { }
 
 const Categories: React.FC<CategoriesProps> = () => {
   return (
-    <div>
-      <NavBar />
-      <div className="flex">
-        <Sidebar />
-        <div className="w-[85%]">
-          <Browse />
-          <AllCategories numImages={20} />
-        </div>
-      </div>
+    <div className="w-[85%]">
+      <Browse />
+      <AllCategories numImages={20} />
     </div>
   );
 };
