@@ -22,7 +22,7 @@ const handleToggleDarkMode = () => {
   };
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <header className={`flex justify-between items-center py-4 px-6 bg-${isDarkMode? "gray-800" : "white"} shadow-lg col-span-3`}>
+    <header className={`flex justify-between items-center py-4 px-6 bg-${isDarkMode? "gray-800" : "white"} shadow-md col-span-3`}>
       <div className="flex items-center">
         
       <button className={`ml-4 ${isDarkMode ? "bg-gray-700 text-white" : "bg-white text-gray-800"} py-2 px-3 rounded-lg`} title={`${isDarkMode ? "Switch to Light" : "Switch to Dark"} Mode`}>
