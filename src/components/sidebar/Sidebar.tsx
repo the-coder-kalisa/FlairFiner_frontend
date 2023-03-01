@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { FaHome, FaTv, FaClock, FaFire, FaUsers, FaTags, FaRss, FaCalendar } from 'react-icons/fa';
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
-
-
+import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
   const [showNames, setShowNames] = useState(true);
@@ -65,10 +64,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-6">
+            <Link to='/dashboard/categories' className="flex items-center text-gray-600 hover:text-gray-800 mb-6">
               <FaTags className="mr-2" size={20} />
               {showNames && <span>Category</span>}
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-6">
@@ -77,10 +76,10 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-6">
+            <Link to='/dashboard/events' className="flex items-center text-gray-600 hover:text-gray-800 mb-6">
               <FaCalendar className="mr-2" size={20} />
               {showNames && <span>Event</span>}
-            </a>
+            </Link>
           </li>
           
         </ul>
