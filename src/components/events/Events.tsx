@@ -4,7 +4,8 @@ import { GoLocation} from "react-icons/go";
 import { Link } from 'react-router-dom';
 type Eventsprops={
   numImages:number;
-}
+} 
+
 const Events :React.FC<Eventsprops>=({numImages})=> {
   const height =128;
   const width=128;
@@ -36,15 +37,15 @@ const Events :React.FC<Eventsprops>=({numImages})=> {
         <Link to='#'>Create Events</Link>
         </div>
         <div className="flex flex-row justify-between p-6 border-b-4">
-          <div className="flex flex-row ">
-          {Images.map((imageUrl, index)=>(
+          <div className="flex flex-row "> 
+          {/* {Images.map((imageUrl, index)=>( */}
           <img id="image " 
-          src={imageUrl}
-          alt={`Image ${index+1}`}
+          src= 'https://picsum.photos/128/128'
+          // alt={`Image ${index+1}`}
           className="bg-black h-32 w-32" 
-          key={imageUrl}
+          // key={imageUrl}
           />
-            ))}
+            {/* ))} */}
           <div id="others" className="flex flex-col justify-between px-4">
           <h1 className='text-[#860909] text-lg lg:font-extrabold  '>{event.name}</h1>
             <section className="text-sm">{event.desc_prize}</section>
@@ -58,14 +59,14 @@ const Events :React.FC<Eventsprops>=({numImages})=> {
         </div>
         <div className="flex flex-row justify-between p-6 border-b-4">
           <div className="flex flex-row ">
-            {Images.map((imageUrl, index)=>(
-          <img id="image " 
-          src={imageUrl}
-          alt={`Image ${index+1}`}
+       {/* {Images.map((imageUrl, index)=>( */}
+       <img id="image " 
+          src= 'https://picsum.photos/seed/picsum/128/128'
+          // alt={`Image ${index+1}`}
           className="bg-black h-32 w-32" 
-          key={imageUrl}
+          // key={imageUrl}
           />
-            ))}
+            {/* ))} */}
           <div id="others" className="flex flex-col justify-between px-4">
           <h1 className='text-[#860909] text-lg lg:font-extrabold  '>{event.name}</h1>
             <section className="text-sm">{event.desc_prize}</section>
@@ -79,14 +80,12 @@ const Events :React.FC<Eventsprops>=({numImages})=> {
         </div>
         <div className="flex flex-row justify-between p-6 border-b-4">
           <div className="flex flex-row ">
-          {Images.map((imageUrl, index)=>(
           <img id="image " 
-          src={imageUrl}
-          alt={`Image ${index+1}`}
+          src= 'https://picsum.photos/seed/picsum/128/128'
+          // alt={`Image ${index+1}`}
           className="bg-black h-32 w-32" 
-          key={imageUrl}
+          // key={imageUrl}
           />
-            ))}
           <div id="others" className="flex flex-col justify-between px-4">
           <h1 className='text-[#860909] text-lg lg:font-extrabold  '>{event.name}</h1>
             <section className="text-sm">{event.desc_prize}</section>
