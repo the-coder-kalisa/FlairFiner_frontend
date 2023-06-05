@@ -11,10 +11,10 @@ const Welcome: React.FC<WelcomeProps> = () => {
     <div className="bg-center bg-cover h-screen w-screen p-10 bg-[url(../../images/logo.png)] welcome-page">
       <a href="/">
         <img src={logo} alt="FlairFinder Logo" className="h-12 ml-14" />
-      </a>
+      </a> 
       <div className="flex flex-col justify-center items-center">
         <img src={earth} className="w-[15%]" alt="" />
-        <span className="text-white mb-4 mt-6 font-bold text-3xl">
+        <span className="text-white mb-4 mt-6 font-bold text-3xl"> 
           World of talents
         </span>
         <span className="italic text-white text-lg">
