@@ -12,8 +12,10 @@ type Event = {
   location: string;
   image: string;
 };
-
-const Events: React.FC = () => {
+type EventsProps = {
+  numEvents: number;
+};
+const Events: React.FC<EventsProps> = ({ numEvents }) => {
   const [events, setEvents] = useState<Event[]>([]);
   const [showPopup, setShowPopup] = useState(false);
 
@@ -51,7 +53,7 @@ const Events: React.FC = () => {
             Create Events
           </Link>
         </div>
-        {events.map((event, index) => (
+        {events.slice(0, numEvents).map((event, index) => (
           <div key={index} className="p-6 border-b-4">
             <div className="flex flex-row space-x-6">
               <div>
