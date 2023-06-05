@@ -15,12 +15,16 @@ const Sidebar = () => {
       <div className=' px-6  pb-3'>
         <ul className='space-y-2'>
         <li>
+          <Link to="/signup">
             <a href="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-6 ">
               <span>Start Using FlairFiner</span>
             </a>
+          </Link>
+            <Link to="/login">
             <a href="#" className="flex items-center text-gray-600 hover:text-gray-80 underline text-sm">
               <span>Login</span>
             </a>
+            </Link>
           
           </li>
         
