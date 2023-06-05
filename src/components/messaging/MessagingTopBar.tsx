@@ -16,7 +16,7 @@ const MessagingTopBar: React.FC<MessagingTopBarProps> = () => {
         <span className="text-xl">{name}</span>
       </div>
       <div className="flex items-center">
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className="h-12" />
       </div>
       <div className="h-full flex items-center justify-between mr-8 px-8 w-[20%]">
         <img src={phone} alt="" className="h-[25%] cursor-pointer" />

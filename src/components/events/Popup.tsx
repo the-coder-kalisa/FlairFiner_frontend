@@ -6,9 +6,9 @@ interface PopupProps {
 
 const Popup: React.FC<PopupProps> = ({ closePopup }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-8 rounded">
-        <h2>Create Event Popup</h2>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-1000">
+      <div className="bg-white p-8 rounded transition-transform duration-500">
+        <h2>Create Event</h2>
         <p>This is the content of the popup.</p>
         <button onClick={closePopup}>Close</button>
       </div>
