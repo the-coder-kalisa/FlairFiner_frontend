@@ -25,7 +25,7 @@ const UploadSection: React.FC = () => {
           src={cameraImage}
           alt="Upload"
           onClick={handleClick}
-          className="w-32 h-32 m-auto"
+          className="w-32 h-[7rem] m-auto"
         />
         <p>Upload Video/Image</p>
         <p className="text-gray-500 mb-2">Minimum width 480 pixels, 19:19</p>
