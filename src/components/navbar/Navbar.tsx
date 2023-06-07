@@ -41,13 +41,13 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <button
-          className={`ml-4 ${
+          className={`ml-4 focus:outline-none ${
             isDarkMode ? "bg-gray-700 text-white" : "bg-white text-gray-800"
           } py-2 px-3 rounded-lg`}
           title={`${isDarkMode ? "Switch to Light" : "Switch to Dark"} Mode`}
         >
           {isDarkMode ? (
-            <FaSun className="w-5 h-5" />
+            <FaSun className="w-5 h-5 " />
           ) : (
             <FaMoon className="w-5 h-5" />
           )}
@@ -79,14 +79,14 @@ const Navbar = () => {
       <div className="flex items-center">
         <div className="ml-6 flex items-center">
           <button
-            className="flex items-center text-gray-500 hover:text-gray-700 mr-4"
+            className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700 mr-4"
             title="Upload"
           >
             <FaUpload className="mr-2" />
             {/* <span>Upload</span> */}
           </button>
           <button
-            className="flex items-center text-gray-500 hover:text-gray-700 mr-4"
+            className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700 mr-4"
             title="Livestream"
           >
             <FaVideo className="mr-2" />
@@ -94,7 +94,7 @@ const Navbar = () => {
           </button>
           <Link to="/chat">
             <button
-              className="flex items-center text-gray-500 hover:text-gray-700 mr-4"
+              className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700 mr-4"
               title="Messages"
             >
               <FaEnvelope className="mr-2" />
@@ -102,7 +102,7 @@ const Navbar = () => {
             </button>
           </Link>
           <button
-            className="flex items-center text-gray-500 hover:text-gray-700 mr-4"
+            className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700 mr-4"
             title="Notifications"
           >
             <FaBell className="mr-2" />
@@ -111,7 +111,7 @@ const Navbar = () => {
 
           <div className="relative">
             <button
-              className="flex items-center text-gray-500 hover:text-gray-700"
+              className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700"
               title="Profile"
               onClick={() => setShowMenu(!showMenu)}
             >
@@ -120,15 +120,15 @@ const Navbar = () => {
             </button>
             {showMenu && (
               <div className="absolute right-0 mt-2 w-40 bg-white rounded-md overflow-hidden shadow-xl z-10">
-                <button className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <button className="focus:outline-none block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   <FaUserCircle className="mr-2" />
                   Profile
                 </button>
-                <button className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <button className="focus:outline-none block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   <FaCog className="mr-2" />
                   Settings
                 </button>
-                <button className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                <button className="focus:outline-none block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   <FaSignOutAlt className="mr-2" />
                   Logout
                 </button>

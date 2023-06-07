@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 ("./components/signup/Signup");
 import Events from "./components/events/Events";
 import Dashboard from "./pages/Dashboard";
+import Vid from "./components/video/vid";
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="categories" element={<Categories />} />
           <Route path="events" element={<Events numEvents={5} />} />
+          <Route path="onelive" element={<Vid />}/>
         </Route>
         <Route path="signup" element={<Signup />}></Route>
         <Route path="chat" element={<Messaging />}></Route>

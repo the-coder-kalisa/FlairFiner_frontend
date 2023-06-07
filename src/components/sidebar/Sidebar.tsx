@@ -11,17 +11,18 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white h-screen w-[15%] px-6 text-md col-span-1  inset-y-0 left-0 pt-10 border-right drop-shadow-lg">
+    // <div className="flex flex-col bg-white h-screen w-[15%] px-6 text-md col-span-1  inset-y-0 left-0 pt-10 border-right drop-shadow-lg">
+      <div className="flex flex-col bg-white h-screen w-[15%] px-6 text-md col-span-1  inset-y-0 left-0 pt-10 border-right ">
       <div className=' px-6  pb-3'>
         <ul className='space-y-2'>
         <li>
           <Link to="/signup">
-            <a href="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-6 ">
+            <a href="#" className="flex items-center text-gray-600 hover:text-red-800 mb-6 ">
               <span>Start Using FlairFiner</span>
             </a>
           </Link>
             <Link to="/login">
-            <a href="#" className="flex items-center text-gray-600 hover:text-gray-80 underline text-sm">
+            <a href="#" className="flex items-center text-gray-600 hover:text-red-800 underline text-sm">
               <span>Login</span>
             </a>
             </Link>
@@ -30,9 +31,9 @@ const Sidebar = () => {
         
         </ul>
       </div>
-      <div className="flex items-center justify-between py-4 px-6">
-        <button className="text-gray-500 hover:text-gray-700" onClick={toggleNames}>
-          {showNames ? <MdVisibilityOff size={24} /> : <MdVisibility size={24} />}
+      <div className="flex items-center justify-between py-4 ">
+        <button className="text-gray-500 hover:text-gray-700 focus:outline-none " onClick={toggleNames}>
+          {showNames ? <MdVisibilityOff size={24}  /> : <MdVisibility size={24} />}
         </button>
       </div>
       <nav className=" px-6 pb-6">
