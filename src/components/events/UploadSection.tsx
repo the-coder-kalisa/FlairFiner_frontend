@@ -27,16 +27,15 @@ const UploadSection: React.FC = () => {
           onClick={handleClick}
           className="w-32 h-[7rem] m-auto"
         />
-        <p>Upload Video/Image</p>
+        <p>Upload Image</p>
         <p className="text-gray-500 mb-2">Minimum width 480 pixels, 19:19</p>
       </label>
       <input
         id="uploadInput"
         type="file"
-        accept="image/*, video/*"
+        accept="image/*"
         ref={fileInputRef}
         onChange={handleFileChange}
-        className="hidden"
       />
     </div>
   );
