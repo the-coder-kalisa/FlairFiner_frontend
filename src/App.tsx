@@ -8,7 +8,7 @@ import Login from "./components/Login/Login";
 import Events from "./components/events/Events";
 import Dashboard from "./pages/Dashboard";
 import Vid from "./components/video/vid";
-import CommentSection from "./components/video/comment"
+
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="events" element={<Events numEvents={5} />} />
           <Route path="onelive" element={<Vid />}/>
         </Route>
-        <Route path="comment" element={<CommentSection />} ></Route>
+        
         <Route path="signup" element={<Signup />}></Route>
         <Route path="chat" element={<Messaging />}></Route>
         <Route path="login" element={<Login />} />
