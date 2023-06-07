@@ -27,9 +27,9 @@ const EventCreate: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col mt-3">
+    <div className="flex flex-col mt-3 text-gray-500">
       <div>
-        <label htmlFor="eventType">Event Type*</label> <br />
+        <label htmlFor="eventType" className="mb-1">Event Type*</label> <br />
         <label className="mr-3">
           <input
             type="radio"
@@ -114,6 +114,14 @@ const EventCreate: React.FC = () => {
           className="w-full rounded-md p-1 outline-gray-400 border-2 border-gray-300 mb-3"
           style={{ outlineColor: "gray" }}
         />
+      </div>
+      <div>
+        <label htmlFor="startTime">Start</label> <br />
+        <input type="datetime-local" name="startTime" id="startTime" className="p-1 w-full rounded-md border-2 border-gray-300 mb-3" />
+      </div>
+      <div>
+        <label htmlFor="endTime">End</label> <br />
+        <input type="datetime-local" name="endTime" id="endTime" className="p-1 w-full rounded-md border-2 border-gray-300 mb-3" />
       </div>
     </div>
   );
