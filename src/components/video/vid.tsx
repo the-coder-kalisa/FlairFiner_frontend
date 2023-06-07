@@ -17,11 +17,17 @@ const Vid = () => {
   return (
     <div className="w-screen flex flex-row lg:justify-between">
       <div className={`h-3/4 w-${showComments ? "3/5" : "full"} `}>
-        <video
+        {/* <video
           src="/theguy.mp4"
           className={`h-${showComments ? "1/3" : "1/3"} w-full `}
           controls
-        ></video>
+        ></video> */}
+
+      
+        <iframe 
+src="https://www.youtube.com/embed/tgbNymZ7vqY/controls=1" className={`h-${showComments ? "full" : "full"} w-full `}
+>
+</iframe> 
         <div>likesss</div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-row justify-between">
@@ -77,7 +83,8 @@ const Vid = () => {
         </button>
         {showComments && (
           <>
-            <div className="w-full flex flex-col justify-between h-1/3">
+          {/* <div className="w-full flex flex-col justify-between h-1/3"> */}
+            <div className="w-full flex flex-col justify-between h-full">
               <div className="flex flex-col justify-around lg:h-72">
                 <div className="user flex flex-row h-fit justify-start w-full">
                   <div className="image ">
