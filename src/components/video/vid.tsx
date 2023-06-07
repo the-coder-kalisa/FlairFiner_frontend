@@ -59,7 +59,6 @@ const Vid: React.FC = () => {
           src="https://www.youtube.com/embed/jhuvnB1JXV0/controls=0"
           className={`h-${showComments ? "full" : "full"} w-full`}
         >
-          <div>HELLOOOOOOOOOOOOOOOOOOOOOOOOO</div>
         </iframe>
         <div>likesss</div>
         <div className="flex flex-row justify-between">
