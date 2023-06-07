@@ -20,9 +20,47 @@ const EventCreate: React.FC = () => {
   const handleFormatChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedFormat(event.target.value);
   };
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedOption(event.target.value);
+  };
 
   return (
     <div className="flex flex-col mt-3">
+      <div>
+        <label htmlFor="eventType">Event Type*</label> <br />
+        <label className="mr-3">
+          <input
+            type="radio"
+            value="online"
+            checked={selectedOption === "online"}
+            onChange={handleOptionChange} 
+            className="mr-1"
+          />
+          Online
+        </label>
+        <label className="mr-3">
+          <input
+            type="radio"
+            value="in-person"
+            checked={selectedOption === "in-person"}
+            onChange={handleOptionChange}
+            className="mr-1"
+          />
+          In Person
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="both"
+            checked={selectedOption === "both"}
+            onChange={handleOptionChange}
+            className="mb-3 mr-1"
+          />
+          Both
+        </label>
+      </div>
       <div>
         <label htmlFor="eventFormat" className="">
           Event format*
