@@ -42,7 +42,7 @@ const Events: React.FC<EventsProps> = ({ numEvents }) => {
               className={`py-2 pl-10 pr-4 rounded-lg border-2 focus:outline-none focus:border-${
                 isDarkMode ? "gray-500" : "indigo-500"
               } ${
-                isDarkMode
+                isDarkMode 
                   ? "bg-gray-700 text-gray-100"
                   : "bg-white text-gray-800"
               }`}

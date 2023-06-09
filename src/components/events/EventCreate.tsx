@@ -29,39 +29,6 @@ const EventCreate: React.FC = () => {
   return (
     <div className="flex flex-col mt-3 text-gray-500">
       <div>
-        <label htmlFor="eventType" className="mb-1">Event Type*</label> <br />
-        <label className="mr-3">
-          <input
-            type="radio"
-            value="online"
-            checked={selectedOption === "online"}
-            onChange={handleOptionChange} 
-            className="mr-1"
-          />
-          Online
-        </label>
-        <label className="mr-3">
-          <input
-            type="radio"
-            value="in-person"
-            checked={selectedOption === "in-person"}
-            onChange={handleOptionChange}
-            className="mr-1"
-          />
-          In Person
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="both"
-            checked={selectedOption === "both"}
-            onChange={handleOptionChange}
-            className="mb-3 mr-1"
-          />
-          Both
-        </label>
-      </div>
-      <div>
         <label htmlFor="eventFormat" className="">
           Event format*
         </label>{" "}
