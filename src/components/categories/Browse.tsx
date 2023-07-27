@@ -8,7 +8,7 @@ type Category = {
 
 function Browse() {
   return (
-    <div className="mx-12 mt-12">
+    <div className="mx-12 mt-12 ">
       <div>
         <h2>Browse by Category</h2>
       </div>

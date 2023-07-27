@@ -45,7 +45,7 @@ const LoginRight = () => {
           <div className="w-[85%] pl-4 text-[#8F0A0A]">Forgot password?</div>
         </div>
         <div className="">
-          <Link to="/dashboard/categories">
+          <Link to="/dashboard">
             <button className="w-[85%] h-[70px] outline-none p-3 bg-[#8F0A0A] text-[white] text-center border-0 rounded-none font-bold ">
               Log in
             </button>

@@ -1,4 +1,3 @@
-import { lineHeight } from "@mui/system";
 import React, { useState } from "react";
 import {
   FaArrowCircleRight,
@@ -6,6 +5,9 @@ import {
   FaComment,
   FaCommentDots,
   FaTelegram,
+  FaThumbsUp,
+  FaThumbsDown,
+  FaStar,
 } from "react-icons/fa";
 
 interface Comment {
@@ -17,12 +19,29 @@ interface Comment {
   text: string;
   image: string;
 }
+
 const Vid: React.FC = () => {
   const [showComments, setShowComments] = useState(true);
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
+  const [goldenBuzzer, setGoldenBuzzer] = useState(false);
 
   const toggleComments = () => {
     setShowComments(!showComments);
   };
+
+  const toggleLike = () => {
+    setLikes((prevLikes) => (prevLikes === 1 ? 0 : 1));
+  };
+
+  const toggleDislike = () => {
+    setDislikes((prevDislikes) => (prevDislikes === 1 ? 0 : 1));
+  };
+
+  const toggleGoldenBuzzer = () => {
+    setGoldenBuzzer((prevGoldenBuzzer) => !prevGoldenBuzzer);
+  };
+
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState<string>("");
 
@@ -35,7 +54,7 @@ const Vid: React.FC = () => {
       const comment: Comment = {
         id: Date.now(),
         text: newComment,
-        image: "https://source.unsplash.com/random/32x32", // Replace with desired image URL
+        image: "https://source.unsplash.com/random/32x32",
         name: "Claire",
         reply: "Reply",
         likes: 878,
@@ -47,8 +66,8 @@ const Vid: React.FC = () => {
   };
 
   return (
-    <div className="w-screen flex flex-row lg:justify-between">
-      <div className={`h-3/4 w-${showComments ? "full" : "full"} `}>
+    <div className="w-[167%] h-[80%] flex flex-row row-span-2 sm:justify-between">
+    <div className={`h-3/4 w-${showComments ? "full" : "full"}`}>
         {/* <video
           src="/theguy.mp4"
           className={`h-${showComments ? "1/3" : "1/3"} w-full `}
@@ -60,7 +79,29 @@ const Vid: React.FC = () => {
           className={`h-${showComments ? "full" : "full"} w-full`}
         >
         </iframe>
-        <div>likesss</div>
+        <div className="flex flex-row justify-between">
+          <button onClick={toggleLike} className="focus:outline-none">
+            <FaThumbsUp
+              size={20}
+              color={likes === 1 ? "blue" : "gray"}
+              className="mr-2 cursor-pointer"
+            />
+          </button>
+          <button onClick={toggleDislike} className="focus:outline-none">
+            <FaThumbsDown
+              size={20}
+              color={dislikes === 1 ? "red" : "gray"}
+              className="mr-2 cursor-pointer"
+            />
+          </button>
+          <button onClick={toggleGoldenBuzzer} className="focus:outline-none">
+            <FaStar
+              size={20}
+              color={goldenBuzzer ? "gold" : "gray"}
+              className="mr-2 cursor-pointer"
+            />
+          </button>
+        </div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-row justify-between">
             <div className="image ">
@@ -127,11 +168,11 @@ const Vid: React.FC = () => {
                       <img
                         src={comment.image}
                         alt=""
-                        className="rounded-full w-12 h-12 object-cover"
+                        className="rounded-full w-8 h-8 object-cover"
                       />
                     </div>
                     <div className="details w-3/4   ">
-                      <section className="px-4 flex flex-row ">
+                      <section className="px-2 flex flex-row ">
                         <div className="font-semibold w-fit ">
                           {comment.name}
                         </div>

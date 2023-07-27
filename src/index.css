@@ -6,13 +6,18 @@
 #others section{
   font-family: 'Inter', sans-serif;
 }
+#root {
+  width: 100%;
+}
 :root {
   font-family: "DM Sans";
   overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -144,3 +149,6 @@ button:focus-visible {
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}

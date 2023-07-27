@@ -7,7 +7,7 @@ interface CategoriesProps { }
 
 const Categories: React.FC<CategoriesProps> = () => {
   return (
-    <div className="w-[85%]">
+    <div className="w-full col-span-2">
       <Browse />
       <AllCategories numImages={20} />
     </div>

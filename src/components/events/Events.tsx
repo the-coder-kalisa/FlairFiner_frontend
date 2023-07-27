@@ -4,6 +4,7 @@ import { GoLocation } from "react-icons/go";
 import { Link } from "react-router-dom";
 import eventsData from "../../events.json";
 import Popup from "./Popup";
+import Navbar from "../navbar/Navbar";
 
 type Event = {
   name: string;
@@ -27,7 +28,8 @@ const Events: React.FC<EventsProps> = ({ numEvents }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className="w-full">
+    
+    <div className="w-full col-span-2">
       {showPopup && <Popup closePopup={() => setShowPopup(false)} />}
 
       <div className="w-full h-screen px-6">
