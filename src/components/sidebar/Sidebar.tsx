@@ -20,7 +20,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/login" className="flex items-center text-gray-600 hover:text-gray-800 text-orange-500 underline text-xs">
+            <Link to="/login" className="flex items-center text-gray-600  hover:text-red-800 underline text-xs">
               <span>Login</span>
             </Link>
           </li>
@@ -40,10 +40,10 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-2">
-              <FaTv className="mr-2" size={18} />
+            <Link to="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-6">
+              <FaTv className="mr-2" size={20} />
               {showNames && <span>Live</span>}
-            </Link>
+            </Link> 
           </li>
           <li>
             <Link to="#" className="flex items-center text-gray-600 hover:text-gray-800 mb-2">

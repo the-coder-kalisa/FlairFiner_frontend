@@ -97,7 +97,7 @@ const Navbar = () => {
         <div className="ml-6 flex items-center">
           <button
             className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700 "
-            title="Upload"
+            title="Upload story"
           >
             <FaUpload className="mr-2" />
             {/* <span>Upload</span> */}

@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
+}
+#root button:focus{
+  border-color: transparent;
 }
 
 .logo {

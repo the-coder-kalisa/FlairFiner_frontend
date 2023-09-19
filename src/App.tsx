@@ -86,6 +86,7 @@ function App() {
             }
            />
         <Route path="signup" element={<Signup />}></Route>
+        
         <Route path="chat" element={<Messaging />}></Route>
         <Route path="login" element={<Login />} />
         <Route />

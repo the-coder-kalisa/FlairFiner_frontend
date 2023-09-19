@@ -5,9 +5,6 @@ import {
   FaComment,
   FaCommentDots,
   FaTelegram,
-  FaThumbsUp,
-  FaThumbsDown,
-  FaStar,
 } from "react-icons/fa";
 
 interface Comment {
@@ -79,29 +76,7 @@ const Vid: React.FC = () => {
           className={`h-${showComments ? "full" : "full"} w-full`}
         >
         </iframe>
-        <div className="flex flex-row justify-between">
-          <button onClick={toggleLike} className="focus:outline-none">
-            <FaThumbsUp
-              size={20}
-              color={likes === 1 ? "blue" : "gray"}
-              className="mr-2 cursor-pointer"
-            />
-          </button>
-          <button onClick={toggleDislike} className="focus:outline-none">
-            <FaThumbsDown
-              size={20}
-              color={dislikes === 1 ? "red" : "gray"}
-              className="mr-2 cursor-pointer"
-            />
-          </button>
-          <button onClick={toggleGoldenBuzzer} className="focus:outline-none">
-            <FaStar
-              size={20}
-              color={goldenBuzzer ? "gold" : "gray"}
-              className="mr-2 cursor-pointer"
-            />
-          </button>
-        </div>
+        <div>likesss</div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-row justify-between">
             <div className="image ">

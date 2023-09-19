@@ -230,7 +230,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
               {!isCommentEmpty && (
                 <button
                   type="submit"
-                  className="ml-2 px-3 py-1 text-xs bg-yellow-500 text-white rounded-sm hover:bg-yellow-600"
+                  className="ml-2 px-3 py-1 text-xs bg-yellow-500 text-white rounded-sm hover:bg-yellow-600 focus:outline-none"
                 >
                   Save
                 </button>
