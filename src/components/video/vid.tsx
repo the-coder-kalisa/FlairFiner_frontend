@@ -5,6 +5,9 @@ import {
   FaComment,
   FaCommentDots,
   FaTelegram,
+  FaThumbsUp,
+  FaThumbsDown,
+  FaStar,
 } from "react-icons/fa";
 
 interface Comment {
@@ -64,7 +67,7 @@ const Vid: React.FC = () => {
 
   return (
     <div className="w-[167%] h-[80%] flex flex-row row-span-2 sm:justify-between">
-    <div className={`h-3/4 w-${showComments ? "full" : "full"}`}>
+      <div className={`h-3/4 w-${showComments ? "full" : "full"}`}>
         {/* <video
           src="/theguy.mp4"
           className={`h-${showComments ? "1/3" : "1/3"} w-full `}
@@ -74,9 +77,31 @@ const Vid: React.FC = () => {
         <iframe
           src="https://www.youtube.com/embed/jhuvnB1JXV0/controls=0"
           className={`h-${showComments ? "full" : "full"} w-full`}
-        >
-        </iframe>
-        <div>likesss</div>
+        ></iframe>
+        <div className="w-full flex flex-row justify-between mb-3">
+          <div>
+
+          <button onClick={toggleLike} className="focus:outline-none ">
+            <FaThumbsUp className="text-green-500" />
+          </button>
+          <span className="text-green-500">{likes}</span>
+          </div>
+          <div>
+
+          <button onClick={toggleDislike} className="focus:outline-none">
+            <FaThumbsDown className="text-red-500" />
+          </button>
+          <span className="text-red-500">{dislikes}</span>
+          </div>
+
+          <button
+            onClick={toggleGoldenBuzzer}
+            className="focus:outline-none text-yellow-500"
+          >
+            <FaStar />
+          </button>
+          {/* <span>{goldenBuzzer ? "Golden Buzzer On" : "Golden Buzzer Off"}</span> */}
+        </div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-row justify-between">
             <div className="image ">
@@ -133,41 +158,43 @@ const Vid: React.FC = () => {
         </button>
         {showComments && (
           <>
-            
             <div className="flex flex-col justify-between">
-              {comments.length==0 ?(<div className="m-auto">Be the first to comment</div>) :(
-              <div className="flex flex-col justify-between w-full h-fit pt-2">
-                {comments.map((comment) => (
-                  <div key={comment.id} className="flex flex-row">
-                    <div className="image pb-3">
-                      <img
-                        src={comment.image}
-                        alt=""
-                        className="rounded-full w-8 h-8 object-cover"
-                      />
-                    </div>
-                    <div className="details w-3/4   ">
-                      <section className="px-2 flex flex-row ">
-                        <div className="font-semibold w-fit ">
-                          {comment.name}
+              {comments.length == 0 ? (
+                <div className="m-auto">Be the first to comment</div>
+              ) : (
+                <div className="flex flex-col justify-between w-full h-fit pt-2">
+                  {comments.map((comment) => (
+                    <div key={comment.id} className="flex flex-row">
+                      <div className="image pb-3">
+                        <img
+                          src={comment.image}
+                          alt=""
+                          className="rounded-full w-8 h-8 object-cover"
+                        />
+                      </div>
+                      <div className="details w-3/4   ">
+                        <section className="px-2 flex flex-row ">
+                          <div className="font-semibold w-fit ">
+                            {comment.name}
+                          </div>
+                          <div className="font-thin">&nbsp; {comment.text}</div>
+                        </section>
+                        <div className="smaller text-xs flex flex-row justify-around ">
+                          <span className="underline hover:text-slate-500 cursor-pointer">
+                            {comment.days}d
+                          </span>
+                          <span className=" hover:text-slate-500 cursor-pointer">
+                            {comment.likes} likes
+                          </span>
+                          <span className=" hover:text-slate-500 cursor-pointer hover:underline">
+                            {comment.reply}
+                          </span>
                         </div>
-                        <div className="font-thin">&nbsp; {comment.text}</div>
-                      </section>
-                      <div className="smaller text-xs flex flex-row justify-around ">
-                        <span className="underline hover:text-slate-500 cursor-pointer">
-                          {comment.days}d
-                        </span>
-                        <span className=" hover:text-slate-500 cursor-pointer">
-                          {comment.likes} likes
-                        </span>
-                        <span className=" hover:text-slate-500 cursor-pointer hover:underline">
-                          {comment.reply}
-                        </span>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>)}
+                  ))}
+                </div>
+              )}
               <div className="flex flex-row ">
                 <input
                   type="text"

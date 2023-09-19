@@ -76,7 +76,7 @@ const Stories = () => {
   };
 
   return (
-    <div className="mt-20 col-span-2 w-full grid place-items-center ">
+    <div className="mt-10 col-span-2 w-full grid place-items-center ">
       <h2>Stories</h2>
       <br />
       <div className="flex justify-start items-center gap-5">

@@ -19,7 +19,7 @@ interface VideoGridProps {
 
 const VideoGrid = ({ videos }: VideoGridProps) => {
   return (
-    <div className="w-[60%]  grid col-span-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-4 overscroll-contain h-[80vh] mt-40">
+    <div className="w-[60%]  grid col-span-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-4 overscroll-contain h-[80vh] mt-12">
       {videos.map((video) => (
         <div key={video.id} className="relative">
   

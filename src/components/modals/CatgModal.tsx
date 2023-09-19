@@ -97,7 +97,7 @@ const CatgModal: React.FC<CatgModalProps> = ({ isOpen, onClose }) => {
                   />
                 </div>
                 <FaTimes
-                  className="text-xl text-gray-600 cursor-pointer absolute top-2 left-2"
+                  className="text-xl text-white opacity-80 cursor-pointer absolute top-2 left-2"
                   onClick={onClose}
                 />
               </div>
