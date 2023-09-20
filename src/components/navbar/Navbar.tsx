@@ -103,6 +103,7 @@ const Navbar = () => {
             setOpenCamera(false);
           }}/>
           <video ref={videoRef} autoPlay playsInline />
+          <button className="absolute bottom-4 right-4 bg-yellow-500 font-medium text-white text-2xl">Buzzer</button>
         </div>
       </Modal>
       <div className="flex items-center">
