@@ -15,6 +15,8 @@ import {
 import logo from "../../images/logo.png";
 import Stories from "../stories/Stories";
 import { Link } from "react-router-dom";
+import { Modal } from "@mui/material";
+import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -24,7 +26,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as HTMLElement)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as HTMLElement)
+      ) {
         setShowMenu(false);
       }
     };
@@ -46,8 +51,40 @@ const Navbar = () => {
 
   const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle search submit here
+    // Handele search submit here
   };
+
+  const [openCamera, setOpenCamera] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (openCamera) {
+      navigator.mediaDevices
+        .getUserMedia({
+          video: true,
+          audio: true,
+        })
+        .then((stream) => {
+          if (videoRef.current) {
+            (videoRef.current as any).srcObject = stream;
+          }
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else {
+      if (videoRef.current) {
+        const stream = (videoRef.current as any).srcObject;
+        if (stream) {
+          const tracks = stream.getTracks();
+
+          tracks.forEach((track: any) => {
+            track.stop();
+          });
+        }
+      }
+    }
+  }, [openCamera]);
 
   return (
     <header
@@ -55,6 +92,19 @@ const Navbar = () => {
         isDarkMode ? "gray-800" : "white"
       } shadow-md col-span-3`}
     >
+      <Modal
+        open={openCamera}
+        onClose={() => {
+          setOpenCamera(false);
+        }}
+      >
+        <div className="flex items-center justify-center h-full">
+          <MdClose className="absolute top-4 right-2 text-white cursor-pointer hover:text-red-600" size={24} onClick={() =>{ 
+            setOpenCamera(false);
+          }}/>
+          <video ref={videoRef} autoPlay playsInline />
+        </div>
+      </Modal>
       <div className="flex items-center">
         <button
           className={`ml-4 focus:outline-none ${
@@ -103,6 +153,9 @@ const Navbar = () => {
             {/* <span>Upload</span> */}
           </button>
           <button
+            onClick={() => {
+              setOpenCamera(true);
+            }}
             className="focus:outline-none flex items-center text-gray-500 hover:text-gray-700 "
             title="Livestream"
           >
@@ -150,10 +203,10 @@ const Navbar = () => {
                   </button>
                 </Link>
                 <Link to="/">
-                <button className="w-full focus:outline-none block px-4 py-2 text-gray-800 hover:bg-gray-100 flex items-center justify-start">
-                  <FaSignOutAlt className="mr-2" />
-                  Logout
-                </button>
+                  <button className="w-full focus:outline-none block px-4 py-2 text-gray-800 hover:bg-gray-100 flex items-center justify-start">
+                    <FaSignOutAlt className="mr-2" />
+                    Logout
+                  </button>
                 </Link>
               </div>
             )}

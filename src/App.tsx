@@ -4,7 +4,6 @@ import Messaging from "./components/messaging/Messaging";
 import Categories from "./components/categories/Categories";
 import Welcome from "./components/welcome/Welcome";
 import Login from "./components/Login/Login";
-("./components/signup/Signup");
 import Events from "./components/events/Events";
 import Dashboard from "./pages/Dashboard";
 import Vid from "./components/video/vid";
@@ -40,21 +39,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />}></Route>
         <Route path="dashboard" element={<Dashboard />}>
-          <Route path='' element={
-            <div className="w-full col-span-2 grid place-items-center max-h-screen overflow-y-scroll">
-              <Stories />
-              <VideoGrid videos={videos}/>
-            </div>
-          } />
           <Route
-            path="performer"
+            path=""
             element={
-              <PerformerProfile
-          
-           
-              />
+              <div className="w-full col-span-2 grid place-items-center max-h-screen overflow-y-scroll">
+                <Stories />
+                <VideoGrid videos={videos} />
+              </div>
             }
-          ></Route>
+          />
+          <Route path="performer" element={<PerformerProfile />}></Route>
           <Route
             path="user"
             element={
@@ -70,27 +64,26 @@ function App() {
           ></Route>
           <Route path="categories" element={<Categories />} />
           <Route path="events" element={<Events numEvents={5} />} />
-          <Route path="onelive" element={<Vid />}/>
+          <Route path="onelive" element={<Vid />} />
         </Route>
-          <Route
-            path="/settings"
-            element={
-              <Settings
-                darkMode={darkMode}
-                notifications={notifications}
-                language={language}
-                onDarkModeChange={handleDarkModeChange}
-                onNotificationsChange={handleNotificationsChange}
-                onLanguageChange={handleLanguageChange}
-              />
-            }
-           />
+        <Route
+          path="/settings"
+          element={
+            <Settings
+              darkMode={darkMode}
+              notifications={notifications}
+              language={language}
+              onDarkModeChange={handleDarkModeChange}
+              onNotificationsChange={handleNotificationsChange}
+              onLanguageChange={handleLanguageChange}
+            />
+          }
+        />
         <Route path="signup" element={<Signup />}></Route>
         <Route path="chat" element={<Messaging />}></Route>
         <Route path="login" element={<Login />} />
         <Route />
         <Route />
-
       </Routes>
     </BrowserRouter>
   );
